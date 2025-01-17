@@ -1,0 +1,29 @@
+# Ignore .vscode folder
+.vscode/
+
+# Ignore Rust target directory
+rust/target/
+
+# Ignore Rust Cargo.lock file
+Cargo.lock
+
+# Ignore C++ build directories
+build/
+cmake-build-*/
+
+# Ignore C++ object files and executables
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# Ignore temporary files
+*.tmp
+*.log
+*.bak
+*.swp
