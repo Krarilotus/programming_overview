@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  #output {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-top: 10px;
+    min-height: 200px;
+    width: 300px;
+    white-space: pre-wrap;
+  }
+  

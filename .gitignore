@@ -1,3 +1,25 @@
+# Ignore Node.js dependencies
+javascript/backend/node_modules/
+
+# Ignore build directories
+javascript/backend/dist/
+javascript/frontend/dist/
+javascript/backend/build/
+javascript/frontend/build/
+
+# Ignore environment variable files
+javascript/backend/.env
+javascript/frontend/.env
+
+# Ignore log files
+javascript/backend/logs/
+javascript/frontend/logs/
+javascript/backend/*.log
+javascript/frontend/*.log
+
+# Ignore temporary files
+javascript/backend/tmp/
+javascript/frontend/tmp/
 # Ignore Rust target directory
 rust/target/
 

@@ -6,69 +6,104 @@ In diesem Repository findest du **Minimalbeispiele** für diverse Programmierspr
 
 ## Inhaltsverzeichnis
 
-1. [Voraussetzungen](#voraussetzungen)
-2. [Empfohlene VS-Code-Extensions](#empfohlene-vs-code-extensions)
-3. [Ordnerstruktur](#ordnerstruktur)
-4. [Beispiele und Anleitungen](#beispiele-und-anleitungen)
-   - [Assembly (NASM, x86-64)](#assembly-nasm-x86-64)
-   - [C++](#c)
-   - [Rust](#rust)
-   - [Python](#python)
-   - [Haskell](#haskell)
-   - [Prolog](#prolog)
-   - [JavaScript/React (Frontend)](#javascriptreact-frontend)
-   - [JavaScript/Node.js (Backend)](#javascriptnodejs-backend)
-5. [Tipps & Tricks](#tipps--tricks)
+- [Projekt: Demonstration verschiedener Programmiersprachen](#projekt-demonstration-verschiedener-programmiersprachen)
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [Voraussetzungen](#voraussetzungen)
+  - [Empfohlene VS-Code-Extensions](#empfohlene-vs-code-extensions)
+  - [Use git:](#use-git)
 
 ---
 
 ## Voraussetzungen
 
-1. **VS Code**: [Download hier](https://code.visualstudio.com/).
-2. **Git**: Um dieses Repository zu klonen ([Download hier](https://git-scm.com/downloads)).
-3. **Compiler / Interpreter** für die jeweiligen Sprachen:
-   - **Assembly**:
-     - NASM (Netwide Assembler) – [Download](https://www.nasm.us/).
-     - Einen Linker wie `ld` (unter Linux in den Binutils enthalten).  
-     - Unter Windows könntest du [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) (Ubuntu) oder MinGW/MSYS2 nutzen.
-     - Für hier reicht die WASM/TASM VS Code Extension
-   - **C++**:
-     - Um mit C++ durchzustarten gibts hier die Einführung [C++](https://isocpp.org/get-started.) 
-     - MSVC (Windows) oder ebenfalls WSL / MSYS2,
-     - g++ oder clang++ (Linux/Mac).
-   - **Rust**:
-     - [Rustup](https://rustup.rs/) installieren, danach `cargo` und `rustc`.
-   - **Python**:
-     - [Python](https://www.python.org/downloads/) 3 (>= 3.7).
-   - **Haskell**:
-     - [GHCup](https://www.haskell.org/ghcup/) installiert alles als komplettpaket 
-     - [GHC](https://www.haskell.org/ghc/) (Glasgow Haskell Compiler) oder Stack/Cabal.
-   - **Prolog**:
-     - SWI-Prolog (https://www.swi-prolog.org/).
-   - **Node.js** (für JavaScript/React):
-     - Aktuelle LTS-Version (>= 16) von [Node.js](https://nodejs.org/).
+1. **VS Code**  
+   - Download: <https://code.visualstudio.com/>
 
-1. **Optional**: 
-   - **CMake** (falls du Build-Skripte für C++ oder Rust nutzen möchtest).
-   - **Docker** (wenn du alles in Containern laufen lassen willst).
+2. **Git**  
+   - Download: <https://git-scm.com/downloads>
+
+3. **Compiler / Interpreter** für die jeweiligen Sprachen:
+
+   - **Assembly**  
+     - NASM (Netwide Assembler) – Download: <https://www.nasm.us/>  
+     - Linker wie `ld` (unter Linux in den Binutils),  
+     - Unter Windows: [WSL](https://learn.microsoft.com/de-de/windows/wsl/install) oder [MSYS2](https://www.msys2.org/) oder **MASM/TASM** als Alternative.  
+
+   - **C++**  
+     - Microsoft Visual C++ (MSVC, Windows), oder  
+     - GCC / Clang (z. B. MinGW oder WSL auf Windows, direkt auf Linux/Mac).  
+     - Info: <https://isocpp.org/get-started>  
+
+   - **Rust**  
+     - `rustup` installieren: <https://rustup.rs/>  
+     - Danach hast du `cargo` (Package-Manager) und `rustc` (Compiler).  
+
+   - **Python**  
+     - <https://www.python.org/downloads/> (3.7+).  
+
+   - **Haskell**  
+     - GHCup als Komplettpaket: <https://www.haskell.org/ghcup/>  
+     - Oder direkt GHC (Glasgow Haskell Compiler) / Stack/Cabal: <https://www.haskell.org/ghc/>  
+
+   - **Prolog**  
+     - SWI-Prolog: <https://www.swi-prolog.org/>  
+
+   - **Node.js** (für JavaScript/React)  
+     - <https://nodejs.org/en/download>  
+     - Ab Version 16 (LTS) oder neuer.  
+     - Enthält **npm** (Node Package Manager) automatisch.
+     - im backend wird `npm install` und `npm start`
+
+4. **Optional**  
+   - **CMake** für C++/Rust-Builds.  
+   - **Docker** (falls du Container-Setups machen willst).
 
 ---
 
 ## Empfohlene VS-Code-Extensions
 
-1. **C/C++**: *C/C++* (von Microsoft)  
-2. **Rust**: *rust-analyzer*  
-3. **Python**: *Python* (ms-python.python)  
-4. **Haskell**: *Haskell* (Haskell Foundation)  
-5. **Prolog**: *SWI-Prolog* (z. B. von Jan Scharold)  
-6. **JavaScript/TypeScript**: meist schon integriert, ggf. *ESLint*, *Prettier*  
-7. **Git-Integration**: *GitLens* (optional, aber sehr nützlich)  
-8. **Remote - WSL** (wenn du unter Windows mit WSL arbeiten möchtest)  
-9. **Live Server** (wenn du einfache HTML-Seiten lokal hosten möchtest; für React verwendest du in der Regel das integrierte Dev-Server-Setup)
+1. **C/C++**  
+   - [ms-vscode.cpptools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+
+2. **Rust**  
+   - [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+
+3. **Python**  
+   - [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+4. **Haskell**  
+   - [haskell.haskell](https://marketplace.visualstudio.com/items?itemName=haskell.haskell)
+
+5. **Prolog**  
+   - [SWI-Prolog (JanScharold.swi-prolog)](https://marketplace.visualstudio.com/items?itemName=JanScharold.swi-prolog)  
+   oder  
+   - [Prolog (arthurwang.vsc-prolog)](https://marketplace.visualstudio.com/items?itemName=arthurwang.vsc-prolog)
+
+6. **JavaScript/TypeScript**  
+   - (teilweise schon integriert in VS Code)  
+   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)  
+   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+7. **GitLens** (optional, aber sehr nützlich)  
+   - [eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+8. **Remote - WSL**  
+   - [ms-vscode-remote.remote-wsl](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+
+9. **Live Server**  
+   - [ritwickdey.LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)  
+   - Für schnelle HTML-Preview (optional).
 
 ---
 
-## Ordnerstruktur
+## Use git:
+um git zu nutzen, klone dein repo zunächst mit:
+`git clone <repolink>`
 
-So könnte deine Ordnerstruktur aussehen:
+Um dann deine Änderungen hochzuladen machst die die folgenden drei befehle:
+`git add .`
+`git commit -m "commitmessage"`
+`git push`
 
+Bevor du nochwas änderst immer einmal die änderungen vom remote runterziehen:
+`git pull`
