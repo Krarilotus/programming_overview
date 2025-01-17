@@ -1,26 +1,45 @@
-# Ignore .vscode folder
-.vscode/
-
 # Ignore Rust target directory
 rust/target/
 
 # Ignore Rust Cargo.lock file
-Cargo.lock
+rust/Cargo.lock
+rust/fib
+rust/fib.pdb
+
+# Ignore Haskell compiled files and directories
+haskell/dist/
+haskell/dist-newstyle/
+haskell/*.hi
+haskell/*.o
+haskell/*.dyn_o
+haskell/*.dyn_hi
+haskell/*.prof
+haskell/*.aux
+haskell/*.hcr
+haskell/*.hc
+haskell/*.chi
+haskell/*.chs.h
+haskell/*.chi.h
+haskell/*.chs.o
+haskell/*.chi.o
+haskell/*.chi.dyn_o
+haskell/*.chs.dyn_o
+haskell/*.exe
 
 # Ignore C++ build directories
-build/
-cmake-build-*/
+cpp/build/
+cpp/cmake-build-*/
 
 # Ignore C++ object files and executables
-*.o
-*.obj
-*.exe
-*.out
-*.a
-*.lib
-*.so
-*.dylib
-*.dll
+cpp/*.o
+cpp/*.obj
+cpp/*.exe
+cpp/*.out
+cpp/*.a
+cpp/*.lib
+cpp/*.so
+cpp/*.dylib
+cpp/*.dll
 
 # Ignore temporary files
 *.tmp
